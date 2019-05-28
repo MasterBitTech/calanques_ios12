@@ -38,7 +38,15 @@ class ControllerAvecTableView: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
-    
+    // Override to support editing the table view.
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            calanques.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueID, sender: calanques[indexPath.row])
     }
@@ -46,6 +54,11 @@ class ControllerAvecTableView: UIViewController, UITableViewDelegate, UITableVie
         if segue.identifier == segueID, let vc = segue.destination as? DetailController {
             vc.calanqueRecue = sender as? Calanque
         }
+    }
+    @IBAction func reloadAction(_ sender: Any) {
+        calanques = CalanqueCollection().all()
+        tableView.reloadData()
+
     }
     
     /*

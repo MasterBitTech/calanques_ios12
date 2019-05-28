@@ -150,7 +150,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kcF-0v-Uxx"/>
+                    <navigationItem key="navigationItem" id="kcF-0v-Uxx">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="Jfj-ST-BOs">
+                            <connections>
+                                <action selector="reloadAction:" destination="9pv-A4-QxB" id="WF6-eS-dAF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="BEN-bZ-KJw" id="4kZ-Ug-4vc"/>
                         <segue destination="sSH-0U-wIZ" kind="show" identifier="Detail" id="XkA-QD-upq"/>
@@ -246,7 +252,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TM-jW-GQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="-232"/>
+            <point key="canvasLocation" x="1674" y="-232"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="QyE-If-vKW">
@@ -391,6 +397,6 @@
         <image name="port pin" width="1024" height="684"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Gys-0w-Yqp"/>
+        <segue reference="XkA-QD-upq"/>
     </inferredMetricsTieBreakers>
 </document>
