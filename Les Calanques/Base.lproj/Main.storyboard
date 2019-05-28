@@ -233,14 +233,20 @@
                             <outlet property="delegate" destination="B0u-JA-ov8" id="69i-mF-i3p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DiI-eU-O2k"/>
+                    <navigationItem key="navigationItem" id="DiI-eU-O2k">
+                        <barButtonItem key="rightBarButtonItem" title="Reload" id="2Vt-GE-BsY">
+                            <connections>
+                                <action selector="reloadAction:" destination="B0u-JA-ov8" id="6Up-bm-SC8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="sSH-0U-wIZ" kind="show" identifier="Detail" id="Gys-0w-Yqp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TM-jW-GQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1673.913043478261" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="1428" y="-232"/>
         </scene>
         <!--Detail Controller-->
         <scene sceneID="QyE-If-vKW">
