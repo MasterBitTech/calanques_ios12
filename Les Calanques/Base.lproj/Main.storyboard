@@ -321,6 +321,7 @@
                     <navigationItem key="navigationItem" id="pwY-VO-bcm">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TeM-6m-dEA">
+                            <rect key="frame" x="101" y="7.5" width="212" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Standard"/>
