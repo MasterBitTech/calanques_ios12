@@ -308,34 +308,29 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p6c-dJ-Qeg">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TeM-6m-dEA">
-                                <rect key="frame" x="20" y="98" width="374" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="HdK-td-K7S"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Standard"/>
-                                    <segment title="Satellite"/>
-                                    <segment title="Hybride"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ghk-uN-s3L"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TeM-6m-dEA" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="10" id="5b7-z5-cc5"/>
                             <constraint firstItem="p6c-dJ-Qeg" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="OPG-qs-T5y"/>
                             <constraint firstItem="p6c-dJ-Qeg" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="Wg8-Nq-KoR"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="TeM-6m-dEA" secondAttribute="trailing" constant="20" id="dqs-qx-Tix"/>
                             <constraint firstItem="p6c-dJ-Qeg" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="fQc-vU-c8P"/>
                             <constraint firstItem="p6c-dJ-Qeg" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="jql-xc-tIG"/>
-                            <constraint firstItem="TeM-6m-dEA" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="yXz-hu-ggo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <navigationItem key="navigationItem" id="pwY-VO-bcm">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="TeM-6m-dEA">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satellite"/>
+                                <segment title="Hybride"/>
+                            </segments>
+                            <connections>
+                                <action selector="segmentedChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ghk-uN-s3L"/>
+                            </connections>
+                        </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="placeholder" id="xT4-jH-dzy">
                             <connections>
                                 <action selector="getPosition:" destination="8rJ-Kc-sve" id="GXy-CH-Q0q"/>
@@ -382,7 +377,7 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sugiton" translatesAutoresizingMaskIntoConstraints="NO" id="xE8-3p-pAu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sugiton" translatesAutoresizingMaskIntoConstraints="NO" id="xE8-3p-pAu" customClass="ImageRonde" customModule="Les_Calanques" customModuleProvider="target">
                                 <rect key="frame" x="119.5" y="74" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="hQh-kq-Wd1"/>
